@@ -21,7 +21,7 @@ then
    USERDB=$1
    PASSDB=$2
 fi
-end
+
 
 # Copiamos el contenido de la carpeta proyecto a la página html
 cp -r ../Codigo/ $WWW
