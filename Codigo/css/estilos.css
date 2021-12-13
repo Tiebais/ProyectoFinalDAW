@@ -1,0 +1,48 @@
+/* Estilos del footer */
+footer{
+    width: 100%;
+    color: #fff;
+    background-color: #333;
+    padding: 40px 0px;
+}
+footer a{
+    color: #fff;
+}
+
+.text-footer{
+    color: #5bc0de;
+}
+
+/* Estilos del body */
+body {
+    background-image: url("../img/fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #fff; 
+    padding-top: 57px;
+    text-align: justify;
+}
+main{
+    min-height: calc(100vh - 58px - 361px);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px; 
+}
+.contenedor{
+    
+    display: block;
+    margin: auto;
+    width: 1250px;
+    background-color: rgb(154, 212, 245);
+    border-radius: 5px; 
+}
+
+
+/* Estilo de la cabecera */
+.navbar {
+    transition: top 0.6s;
+}
