@@ -31,4 +31,5 @@ mysql -u $USERDB -p$USERDB $BBDD < ../DataBase/$DATOS
 
 # Mostramos url de carga
 echo "http://$HOST/Codigo/index.php"
+end
 
