@@ -28,7 +28,7 @@
                     <h1 class="col-8 text-center">Editar Videojuego</h1>
 
                     <?php
-                        $conexion = conectar(true);
+                        $conexion = conectar(false);
                         $idVideojuego=($_GET['idVideojuego']);
                         $consulta= infoVideojuegosEdit($conexion, $idVideojuego);
                         while($fila=mysqli_fetch_array($consulta)){
