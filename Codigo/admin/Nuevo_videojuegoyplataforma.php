@@ -10,7 +10,7 @@
     $idPlataforma = $_POST["Plataforma"];
     $idVideojuego = $_POST["Videojuego"];
 
-    $conexion = conectar(false);
+    $conexion = conectar(true);
     $insertar = nuevoVideojuegoPlataforma($conexion, $idVideojuego, $idPlataforma, $Stock, $Precio);
     mysqli_num_rows($insertar);
     header ('Location: ../admin.php');
