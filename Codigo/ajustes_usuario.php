@@ -28,7 +28,7 @@
                     <h1 class="col-8 text-center">Ajustes de usuario</h1>
 
                     <?php
-                        $conexion = conectar(false);
+                        $conexion = conectar(true);
                         $idUsuario=($_SESSION['idUsuario']);
                         $consulta= EditarUsuarioFromulario($conexion, $idUsuario);
                         while($fila=mysqli_fetch_array($consulta)){
