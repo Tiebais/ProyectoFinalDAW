@@ -68,7 +68,7 @@
 							{
 						?>
 						<div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-							<img src="./img/Videojuegos/Bloodborne.jpg " alt="Videojuegos" style="width:100%; height:400px;">
+							<img src="Codigo/img/Videojuegos/Bloodborne.jpg " alt="Videojuegos" style="width:100%; height:400px;">
 						</div>
 						<?php
 								$i++;
