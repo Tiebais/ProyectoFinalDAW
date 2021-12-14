@@ -7,7 +7,7 @@
     $dni = $_POST["DNI"];
 
     //Creamos la conexión a la BD.
-    $conexion = conectar(true);
+    $conexion = conectar(false);
 
     //comprobamos si el usuario ha rellenado todos los campos
     if($_POST['usuario'] == '' or $_POST['DNI'] == '') { 
