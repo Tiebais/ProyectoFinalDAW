@@ -30,7 +30,7 @@
                 <h1 class="col-8 text-center">Editar Videojuego y su plataforma</h1>
 
                 <?php
-                    $conexion = conectar(true);
+                    $conexion = conectar(false);
                     $consulta= infoVideojuegos($conexion, $idProductos);
                     while($filaP=mysqli_fetch_array($consulta)){
                     $idPlataforma = $filaP['idPlataforma'];
