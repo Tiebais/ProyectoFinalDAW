@@ -26,7 +26,7 @@
     </thead>
     <tbody>
     <?php
-        $conexion = conectar(false);
+        $conexion = conectar(true);
         $consulta= consultaVideojuegos($conexion);
         while($fila=mysqli_fetch_array($consulta)){
     ?>
