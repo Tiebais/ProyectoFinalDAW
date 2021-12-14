@@ -9,7 +9,7 @@
 <?php
     require "../BD/conector_bd.php";
     require "../BD/DAOPlataforma.php";
-    $conexion = conectar(false);
+    $conexion = conectar(true);
     $id = $_GET['idPlataforma'];
     $sql = eliminarPlataforma($conexion, $id);
     mysqli_num_rows($sql);	
