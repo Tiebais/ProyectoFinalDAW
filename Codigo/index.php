@@ -1,8 +1,3 @@
-<?php
-	require "./BD/conector_bd.php";
-	require "./BD/DAOPlataforma.php";
-	require "./BD/DAOVideojuegos.php";
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,6 +5,11 @@
     <title>GAME ON</title>
     <?php include './inc/link.php'; ?>
 </head>
+<?php
+	require "./BD/conector_bd.php";
+	require "./BD/DAOPlataforma.php";
+	require "./BD/DAOVideojuegos.php";
+?>
 <body>
 	<div class="contenedor">
     <?php include './inc/nav.php'; ?>
