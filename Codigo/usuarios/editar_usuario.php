@@ -15,7 +15,7 @@
     $provincia = $_POST["provincia"];
     $CA = $_POST["CA"];
 
-    $conexion = conectar(true);
+    $conexion = conectar(false);
 
     //comprobamos si el usuario ha rellenado todos los campos
     if($_POST['usuario'] == '' or $_POST['password'] == '' or $_POST['password2'] == '' or $_POST['nombre'] == '' or $_POST['apellido1'] == '' 
