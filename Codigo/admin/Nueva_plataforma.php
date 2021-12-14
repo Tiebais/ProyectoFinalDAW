@@ -25,7 +25,7 @@
 
     move_uploaded_file($archivoLogo,$rutaLogo);
 
-    $conexion = conectar(false);
+    $conexion = conectar(true);
 
     //lanzamos la consulta para saber si existe el usuario, email o contraseña
     $consultaNombre = consultaNombre($conexion, $nombre);
