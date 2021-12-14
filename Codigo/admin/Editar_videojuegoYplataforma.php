@@ -11,7 +11,7 @@
     $idPlataforma = $_POST["Plataforma"];
     $idVideojuego = $_POST["Videojuego"];
 
-    $conexion = conectar(false);
+    $conexion = conectar(true);
     $insertar = editarVideojuegoPlataforma($conexion, $idVideojuego, $idPlataforma, $Stock, $Precio, $idProductos);
     mysqli_num_rows($insetar);
     header ('Location: ../Admin.php');
