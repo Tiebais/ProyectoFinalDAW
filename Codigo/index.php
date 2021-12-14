@@ -6,9 +6,9 @@
     <?php include './inc/link.php'; ?>
 </head>
 <?php
-	require "./BD/conector_bd.php";
-	require "./BD/DAOPlataforma.php";
-	require "./BD/DAOVideojuegos.php";
+	require "BD/conector_bd.php";
+	require "BD/DAOPlataforma.php";
+	require "BD/DAOVideojuegos.php";
 ?>
 <body>
 	<div class="contenedor">
