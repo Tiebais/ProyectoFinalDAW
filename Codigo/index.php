@@ -37,7 +37,7 @@
 							{
 						?>
 						<div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-							<img src="Codigo/img/Plataforma/Imagenes/<?php echo $fila['ImagenP'];?>" alt="Plataforma" style="width:100%; height:400px;">
+							<img src="./img/Plataforma/Imagenes/<?php echo $fila['ImagenP'];?>" alt="Plataforma" style="width:100%; height:400px;">
 						</div>
 						<?php
 								$i++;
@@ -72,7 +72,7 @@
 							{
 						?>
 						<div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-							<img src="Codigo/img/Videojuegos/<?php echo $fila['Imagen'];?>" alt="Videojuegos" style="width:100%; height:400px;">
+							<img src="./img/Videojuegos/<?php echo $fila['Imagen'];?>" alt="Videojuegos" style="width:100%; height:400px;">
 						</div>
 						<?php
 								$i++;
