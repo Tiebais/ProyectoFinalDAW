@@ -28,7 +28,7 @@
                     <h1 class="col-8 text-center">Editar Plataforma</h1>
 
                     <?php
-                        $conexion = conectar(false);
+                        $conexion = conectar(true);
                         $idPlataforma=($_GET['idPlataforma']);
                         $consulta= infoPlataforma($conexion, $idPlataforma);
                         while($fila=mysqli_fetch_array($consulta)){
