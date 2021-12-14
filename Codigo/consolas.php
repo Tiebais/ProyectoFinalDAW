@@ -1,6 +1,6 @@
 <?php
-    require "BD/conector_bd.php";
-    require "BD/DAOPlataforma.php";
+    require "./BD/conector_bd.php";
+    require "./BD/DAOPlataforma.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
