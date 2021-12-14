@@ -16,9 +16,6 @@
 		
 		$db = mysqli_select_db($conexion,$bd) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
 		
-		$consulta = "SELECT * FROM tienda_online";
-		$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-
 		if ($conexion){
 			return $conexion;
 		} else {
