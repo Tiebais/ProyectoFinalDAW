@@ -18,7 +18,7 @@
     $ROL = $_POST["ROL"];
 
     //Creamos la conexión a la BD.
-    $conexion = conectar(true);
+    $conexion = conectar(false);
 
     //comprobamos si el usuario ha rellenado todos los campos
     if($_POST['usuario'] == '' or $_POST['password'] == '' or $_POST['password2'] == '' or $_POST['nombre'] == '' or $_POST['apellido1'] == '' 
