@@ -17,7 +17,7 @@
         <main>
         <div class="container-fluid row justify-content-center">
             <?php
-                $conexion = conectar(true);
+                $conexion = conectar(false);
                 //Lanzamos la consulta
                 $consulta= consultaPlataformaVideojuego($conexion);
             ?>
