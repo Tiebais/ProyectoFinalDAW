@@ -40,7 +40,7 @@
 
                     <!--Consolas/Plataforma-->
                     <?php
-                        $conexion = conectar(false);
+                        $conexion = conectar(true);
                         //Lanzamos la consulta
                         $consulta= consultaPlataformaVideojuego($conexion);
                     ?>
@@ -54,7 +54,7 @@
                     
                      <!--Videojuegos-->
                     <?php
-                        $conexion = conectar(false);
+                        $conexion = conectar(true);
                         //Lanzamos la consulta
                         $consulta= consultaVideojuegos($conexion)
                     ?>
