@@ -6,8 +6,8 @@
 			
 		} else {
 			$servidor = "localhost:3306";
-			$usuario = "debianDB";
-			$password = "debianDB";
+			$usuario = "debian";
+			$password = "debian";
 			$bd = "tienda_online";
 		}
 
