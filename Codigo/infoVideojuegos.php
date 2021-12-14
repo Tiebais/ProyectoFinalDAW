@@ -19,7 +19,7 @@
                 <div class="page-header">
                 </div>
                 <?php
-                    $conexion = conectar(true);
+                    $conexion = conectar(false);
                     $idProductos=($_GET['idProductos']);
                     $productoinfo= infoVideojuegos($conexion, $idProductos);
                     while($fila=mysqli_fetch_array($productoinfo)){
