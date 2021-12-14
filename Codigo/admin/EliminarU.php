@@ -9,7 +9,7 @@
 <?php
     require "../BD/conector_bd.php";
     require "../BD/DAOUsuario.php";
-    $conexion = conectar(true);
+    $conexion = conectar(false);
     $id = ($_GET['idUsuario']);
     $sql = EliminarUsuario($conexion, $id);
     mysqli_num_rows($sql);	
