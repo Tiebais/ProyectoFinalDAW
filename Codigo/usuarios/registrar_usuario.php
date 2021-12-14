@@ -18,7 +18,7 @@
     $Direccion = $_POST["Direccion"];
     
     //Creamos la conexión a la BD.
-    $conexion = conectar(false);
+    $conexion = conectar(true);
 
     //comprobamos si el usuario ha rellenado todos los campos
     if($_POST['usuario'] == '' or $_POST['password'] == '' or $_POST['password2'] == '' or $_POST['nombre'] == '' or $_POST['apellido1'] == '' 
