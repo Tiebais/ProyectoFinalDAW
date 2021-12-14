@@ -26,7 +26,7 @@
 				</ul>
 					<div class="carousel-inner">
 						<?php
-							$conexion = conectar(false);
+							$conexion = conectar(true);
 							$consulta = consultarPlataformaCarrousel($conexion);
 							$i = 0;
 							while($fila = mysqli_fetch_assoc($consulta))
@@ -60,7 +60,7 @@
 					<div class="carousel-inner">
 						<?php
 							//Creamos la conexión a la BD.
-							$conexion = conectar(false);
+							$conexion = conectar(true);
 							//Lanzamos la consulta.
 							$consulta = consultaVideojuegoCarrousel($conexion);
 							$i = 0;
