@@ -28,7 +28,7 @@
     </thead>
     <tbody>
     <?php
-        $conexion = conectar(false);
+        $conexion = conectar(true);
         $consulta= consultarPlataforma($conexion);
         while($fila=mysqli_fetch_array($consulta)){
     ?>
