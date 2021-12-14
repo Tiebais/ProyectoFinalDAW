@@ -28,7 +28,7 @@
                     <h1 class="col-8 text-center">Editar Usuario Panel Admin</h1>
 
                     <?php
-                        $conexion = conectar(true);
+                        $conexion = conectar(false);
                         $idUsuario=($_GET['idUsuario']);
                         $consulta= EditarUsuarioFromulario($conexion, $idUsuario);
                         while($fila=mysqli_fetch_array($consulta)){
