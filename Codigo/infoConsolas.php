@@ -18,7 +18,7 @@
                 <div class="page-header">
                 </div>
                 <?php
-                    $conexion = conectar(false);
+                    $conexion = conectar(true);
                     $idPlataforma=($_GET['idPlataforma']);
                     $productoinfo= infoPlataforma($conexion, $idPlataforma);
                     while($fila=mysqli_fetch_array($productoinfo)){
