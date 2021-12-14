@@ -2,10 +2,6 @@
 	require "./BD/conector_bd.php";
 	require "./BD/DAOPlataforma.php";
 	require "./BD/DAOVideojuegos.php";
-
-	ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -72,7 +68,7 @@
 							{
 						?>
 						<div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-							<img src="./img/Videojuegos/<?php echo $fila['Imagen'];?>" alt="Videojuegos" style="width:100%; height:400px;">
+							<img src="./img/Videojuegos/Bloodborne.jpg " alt="Videojuegos" style="width:100%; height:400px;">
 						</div>
 						<?php
 								$i++;
