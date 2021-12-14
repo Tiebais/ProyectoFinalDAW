@@ -33,7 +33,7 @@
     </thead>
     <tbody>
     <?php
-        $conexion = conectar(true);
+        $conexion = conectar(false);
         $consulta= consultarUsuario($conexion);
         while($fila=mysqli_fetch_array($consulta)){
     ?>
