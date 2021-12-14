@@ -8,7 +8,7 @@ $usuario = $_POST["usuario"];
 $password = $_POST["password"];
 
 //Creamos la conexión a la BD.
-$conexion = conectar(true);
+$conexion = conectar(false);
 
 //Lanzamos la consulta.
 $consulta = consultaLogin($conexion, $usuario, $password);
