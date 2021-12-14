@@ -9,7 +9,7 @@
 <?php
     require "../BD/conector_bd.php";
     require "../BD/DAOVideojuegos.php";
-    $conexion = conectar(false);
+    $conexion = conectar(true);
     $idProductos = ($_GET['idProductos']);
     $sql = eliminarVideojuegoPlataforma($conexion, $idProductos);
     mysqli_num_rows($sql);	
