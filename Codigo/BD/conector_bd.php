@@ -12,7 +12,12 @@
 		}
 
 		//para establever una conexcion con una bd necesitamos usar la funcion mysqli_connect();
-		$conexion = mysqli_connect($servidor,$usuario,$password,$bd);
+		$conexion = mysqli_connect($servidor,$usuario,$password) or die ("No se ha podido conectar al servidor de Base de datos");
+		
+		$db = mysqli_select_db($conexion,$bd) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+		
+		$consulta = "SELECT * FROM alumnos";
+		$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
 		if ($conexion){
 			return $conexion;
