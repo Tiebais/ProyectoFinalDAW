@@ -17,7 +17,7 @@
             <div class="container-fluid row justify-content-center">
                 <h1 class="col-12 text-center mb-5">Consolas</h1>
                 <?php
-                    $conexion = conectar(true);
+                    $conexion = conectar(false);
                     $consulta= consultarPlataforma($conexion);
                     while($fila=mysqli_fetch_array($consulta)){
                 ?>
