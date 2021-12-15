@@ -5,7 +5,7 @@ class conexion {
 		$usurio = 'debianDB';
 		$password = 'debianDB';
 		try {
-		   $base = new PDO($dbs, $usuario, $password);
+		   $base = new PDO($database, $usuario, $password);
 		   echo "Conexion exitosa <br>";
 		   return $base;
 		}
