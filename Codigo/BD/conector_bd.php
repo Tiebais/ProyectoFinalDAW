@@ -2,7 +2,7 @@
 class conexion {
 	function conectar($esRemota){
 		$database = 'mysql:dbname=tienda_online;host=localhost';
-		$usurio = 'debianDB';
+		$usuario = 'debianDB';
 		$password = 'debianDB';
 		try {
 		   $base = new PDO($database, $usuario, $password);
