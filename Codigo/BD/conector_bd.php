@@ -1,18 +1,26 @@
 <?php
-class conexion {
+	
 	function conectar($esRemota){
-		$database = 'mysql:dbname=tienda_online;host=localhost';
-		$usuario = 'debianDB';
-		$password = 'debianDB';
-		try {
-		   $base = new PDO($database, $usuario, $password);
-		   echo "Conexion exitosa <br>";
-		   return $base;
+		if ($esRemota){
+			$servidor = "...";
+			
+		} else {
+			$servidor = "localhost";
+			$usuario = "debianDB";
+			$password = "debianDB";
+			$bd = "tienda_online";
 		}
-		catch (PDOException $e) {
-		   echo 'Falló la conexion: ' . $e->getMessage();
+
+		//para establever una conexcion con una bd necesitamos usar la funcion mysqli_connect();
+		$conexion = mysqli_connect($servidor,$usuario,$password,$bd);
+
+		if ($conexion){
+			echo "Conexion exitosa <br>";
+			return $conexion;
+		} else {
+			echo "Error no se ha podido conectar con la BD <br>";
+			//funcion que indica el error al conectar
+			echo mysqli_connect_error();
 		}
 	}
-}
-
 ?>
