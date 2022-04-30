@@ -59,7 +59,7 @@
 		return $resultado;
 	}
 
-	function modifcarContraseña($conexion, $usuario, $password, $dni){
+	function modifcarContrasena($conexion, $usuario, $password, $dni){
 		$consulta = "UPDATE Usuario SET Password= '$password' WHERE Usuario = '$usuario' AND DNI = '$dni'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
