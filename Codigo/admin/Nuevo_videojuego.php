@@ -4,7 +4,7 @@
 
     //Recogemos los valores del formulario.
     $Titulo = $_POST["Titulo"];
-    $Compañia = $_POST["Compañia"];
+    $Compania = $_POST["Compania"];
     $Publicacion = $_POST["Publicacion"];
     $Descripcion = $_POST["Descripcion"];
 
@@ -25,7 +25,7 @@
         window.location.href="../admin.php";
         </script>';
     } else {
-        $insertar = nuevoVideojuego($conexion, $Titulo, $Compañia, $Publicacion, $Descripcion, $nombreImg);
+        $insertar = nuevoVideojuego($conexion, $Titulo, $Compania, $Publicacion, $Descripcion, $nombreImg);
         mysqli_num_rows($insertar);
         header ('Location: ../admin.php');
     }
