@@ -30,8 +30,8 @@
                         <label for="Usuario" class="visually-hidden">Usuario</label>
                         <input id="usuario" type="text" class="form-control" name="usuario" placeholder="Nombre de usuario" required>
 
-                        <label for="Password" class="visually-hidden">Contraseña</label>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña" required>
+                        <label for="Password" class="visually-hidden">Contrasena</label>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Contrasena" required>
                         <p class="mt-5 mb-3 text-muted"></p>
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesion</button>
                         <p class="mt-5 mb-3 text-muted"></p>
@@ -45,8 +45,8 @@
                     <h3 class="row justify-content-center">No estas registrado?</h3>
                     <a href="registro.php" class="col-8 btn btn-lg btn-primary" role="button">Registrarse</a>
 
-                    <h3 class="row justify-content-center">Olvidaste la contraseña?</h3>
-                    <a href="recuperar_contraseña.php" class="col-8 btn btn-lg btn-primary" role="button">Recuperar contraseña</a>
+                    <h3 class="row justify-content-center">Olvidaste la contrasena?</h3>
+                    <a href="recuperar_contrasena.php" class="col-8 btn btn-lg btn-primary" role="button">Recuperar contrasena</a>
 
                 </div>
             </div>
