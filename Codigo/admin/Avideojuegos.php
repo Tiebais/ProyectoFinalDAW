@@ -16,7 +16,7 @@
     <tr>
         <th>idVideojuego</th>
         <th>Titulo </th>
-        <th>Compañia </th>
+        <th>Compania </th>
         <th>Publicacion </th>
         <th>Descripcion</th>
         <th>Imagen</th>
@@ -33,7 +33,7 @@
     <tr>
         <td><?php echo $fila['idVideojuego'] ?></td>
         <td><?php echo $fila['Titulo']  ?></td>
-        <td><?php echo $fila['Compañia']  ?></td>
+        <td><?php echo $fila['Compania']  ?></td>
         <td><?php echo $fila['Publicacion']  ?></td>
         <td><div style="width:400px; height:115px; overflow: auto;"><?php echo $fila['Descripcion']  ?></div></td>
         <td><?php echo $fila['Imagen']  ?></td>
