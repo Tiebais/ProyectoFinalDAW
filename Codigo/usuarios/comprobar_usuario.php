@@ -28,7 +28,7 @@ if(mysqli_num_rows($consulta) == 1){
     $consultaUsuario = consultarUsuarios($conexion, $usuario);
 
     if(mysqli_num_rows($consultaUsuario) == 1){
-        header ('Location: ../recuperar_contraseña.php');
+        header ('Location: ../recuperar_contrasena.php');
     } else {
         header ('Location: ../registro.php');
     }
