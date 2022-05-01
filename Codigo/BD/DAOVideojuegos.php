@@ -53,8 +53,8 @@
 	}
 
 	//crea un nuevo videojuego 
-	function nuevoVideojuego($conexion, $Titulo, $Compañia, $Publicacion, $Descripcion, $nombreImg){
-		$consulta = "INSERT INTO Videojuego VALUES (default, '$Titulo', '$Compañia', '$Publicacion', '$Descripcion', '$nombreImg')";
+	function nuevoVideojuego($conexion, $Titulo, $Compania, $Publicacion, $Descripcion, $nombreImg){
+		$consulta = "INSERT INTO Videojuego VALUES (default, '$Titulo', '$Compania', '$Publicacion', '$Descripcion', '$nombreImg')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
@@ -74,8 +74,8 @@
 	}
 
 	//funcion para editar un videojuego
-	function editarVideojuego($conexion, $Compañia, $Publicacion, $Descripcion, $imagen, $Titulo){
-		$consulta = "UPDATE Videojuego SET `Compañia` = '$Compañia', `Publicacion` = '$Publicacion', `Descripcion` = '$Descripcion', `Imagen` = '$imagen'  WHERE (`Titulo` = '$Titulo')";
+	function editarVideojuego($conexion, $Compania, $Publicacion, $Descripcion, $imagen, $Titulo){
+		$consulta = "UPDATE Videojuego SET `Compañia` = '$Compania', `Publicacion` = '$Publicacion', `Descripcion` = '$Descripcion', `Imagen` = '$imagen'  WHERE (`Titulo` = '$Titulo')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
