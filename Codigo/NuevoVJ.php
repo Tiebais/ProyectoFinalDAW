@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="Compañia" class="visually-hidden">Compania</label>
+                        <label for="Compania" class="visually-hidden">Compania</label>
                         <input id="Compania" type="text" class="form-control" name="Compania" placeholder="Compania"  required>
                     </div>
                     
