@@ -41,15 +41,15 @@
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="password" class="visually-hidden">Contraseña</label>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña" value="<?php echo $fila['Password']?>" required>
+                        <label for="password" class="visually-hidden">Contrasena</label>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Contrasena" value="<?php echo $fila['Password']?>" required>
                         <span id="errorPassword">La Contraseña debe tener al menos una mayuscula, una minuscula, numeros y caracteres especiales </span>
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="Password2" class="visually-hidden">Repita Contraseña</label>
-                        <input id="password2" type="password" class="form-control" name="password2" placeholder="Repita Contraseña" value="<?php echo $fila['Password']?>" required>
-                        <span id="errorPassword2">Las contraseñas no coinciden</span>
+                        <label for="Password2" class="visually-hidden">Repita Contrasena</label>
+                        <input id="password2" type="password" class="form-control" name="password2" placeholder="Repita Contrasena" value="<?php echo $fila['Password']?>" required>
+                        <span id="errorPassword2">Las contrasenas no coinciden</span>
                     </div>
 
                     <div class="form-group col-8 col-md-5">
