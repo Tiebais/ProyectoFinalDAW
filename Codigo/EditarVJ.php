@@ -40,8 +40,8 @@
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="Compañia" class="visually-hidden">Compañia</label>
-                        <input id="Compañia" type="text" class="form-control" name="Compañia" value="<?php echo $fila['Compañia']?>" required>
+                        <label for="Compañia" class="visually-hidden">Compania</label>
+                        <input id="Compania" type="text" class="form-control" name="Compania" value="<?php echo $fila['Compania']?>" required>
                     </div>
                     
                     <div class="form-group col-8 col-md-5">
