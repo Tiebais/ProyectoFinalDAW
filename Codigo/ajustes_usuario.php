@@ -43,7 +43,7 @@
                     <div class="form-group col-8 col-md-5">
                         <label for="password" class="visually-hidden">Contrasena</label>
                         <input id="password" type="password" class="form-control" name="password" placeholder="Contrasena" value="<?php echo $fila['Password']?>" required>
-                        <span id="errorPassword">La Contraseña debe tener al menos una mayuscula, una minuscula, numeros y caracteres especiales </span>
+                        <span id="errorPassword">La Contrasena debe tener al menos una mayuscula, una minuscula, numeros y caracteres especiales </span>
                     </div>
 
                     <div class="form-group col-8 col-md-5">
