@@ -37,17 +37,17 @@
         if(mysqli_num_rows($consultaUsuario) == 1){
             echo'<script type="text/javascript">
             alert("Ese usuario ya existe");
-            window.location.href="../recuperar_contraseña.php";
+            window.location.href="../recuperar_contrasena.php";
             </script>';
         } elseif(mysqli_num_rows($consultaEmail) == 1){
             echo'<script type="text/javascript">
             alert("Ese email ya existe");
-            window.location.href="../recuperar_contraseña.php";
+            window.location.href="../recuperar_contrasena.php";
             </script>';
         } elseif(mysqli_num_rows($consultaDni) == 1){
             echo'<script type="text/javascript">
             alert("Ese DNI ya existe");
-            window.location.href="../recuperar_contraseña.php";
+            window.location.href="../recuperar_contrasena.php";
             </script>';
         } else {
             insertarUsuarios($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI, $Direcccion);
