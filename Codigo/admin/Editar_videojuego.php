@@ -4,7 +4,7 @@
 
     //Recogemos los valores del formulario.
     $Titulo = $_POST["Titulo"];
-    $Compañia = $_POST["Compañia"];
+    $Compania = $_POST["Compania"];
     $Publicacion = $_POST["Publicacion"];
     $Descripcion = $_POST["Descripcion"];
 
@@ -17,7 +17,7 @@
     move_uploaded_file($archivoImg,$rutaImg);
 
     $conexion = conectar(false);
-    $insertar = editarVideojuego($conexion, $Compañia, $Publicacion, $Descripcion, $nombreImg, $Titulo);
+    $insertar = editarVideojuego($conexion, $Compania, $Publicacion, $Descripcion, $nombreImg, $Titulo);
     mysqli_num_rows($insetar);
     header ('Location: ../Admin.php');
 ?>
