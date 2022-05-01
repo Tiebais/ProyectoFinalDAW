@@ -30,15 +30,15 @@
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="password" class="visually-hidden">Contraseña</label>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña" required>
-                        <span id="errorPassword">La Contraseña debe tener al menos una mayuscula, una minuscula, numeros y caracteres especiales </span>
+                        <label for="password" class="visually-hidden">Contrasena</label>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Contrasena" required>
+                        <span id="errorPassword">La Contrasena debe tener al menos una mayuscula, una minuscula, numeros y caracteres especiales </span>
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="Password2" class="visually-hidden">Repita Contraseña</label>
-                        <input id="password2" type="password" class="form-control" name="password2" placeholder="Repita Contraseña" required>
-                        <span id="errorPassword2">Las contraseñas no coinciden</span>
+                        <label for="Password2" class="visually-hidden">Repita Contrasena</label>
+                        <input id="password2" type="password" class="form-control" name="password2" placeholder="Repita Contrasena" required>
+                        <span id="errorPassword2">Las contrasenas no coinciden</span>
                     </div>
 
                     <div class="form-group col-8 col-md-5">
