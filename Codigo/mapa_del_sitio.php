@@ -14,7 +14,7 @@
                 <a href="consolas.php">Consolas</a><br>
                 <a href="videojuegos.php">Videojuegos</a><br>
                 <a href="registro.php">Registro</a><br>
-                <a href="recuperar_contraseña.php">Recuperar contraseña</a><br>
+                <a href="recuperar_contrasena.php">Recuperar contrasena</a><br>
                 <a href="login.php">Login</a><br>
                 <a href="carrito.php">Carrito</a><br>
                 <a href="ajustes_usuario.php">Ajustes usuario</a><br>
