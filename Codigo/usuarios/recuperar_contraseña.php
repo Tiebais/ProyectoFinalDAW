@@ -20,7 +20,7 @@
         $consultaRecuperar = consultarRuperar($conexion, $usuario, $dni);
 
         if(mysqli_num_rows($consultaRecuperar) == 1){
-            $consulta = modifcarContraseña($conexion, $usuario, $dni);
+            $consulta = modifcarContrasena($conexion, $usuario, $dni);
             if(mysqli_num_rows($consultaRecuperar) == 1){
                 header ('Location: ../login.php');
             } else {
