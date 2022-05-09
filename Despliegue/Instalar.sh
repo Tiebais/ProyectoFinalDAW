@@ -13,8 +13,7 @@ WWW="/var/www/html/"
 DATOS="tienda_online.sql"
 BBDD="tienda_online"
 # Se toman los parámetros como USER y PASS de la BBDD
-if [ $# = 2 ];
-then
+if [ $# = 2 ]; then
    USERDB=$1
    PASSDB=$2
 fi
