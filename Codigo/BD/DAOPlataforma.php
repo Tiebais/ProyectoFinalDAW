@@ -1,42 +1,42 @@
 <?php
 	//funcion para el carrousel de las plataformas
 	function consultarPlataformaCarrousel($conexion){
-		$consulta = "SELECT idPlataforma, ImagenP FROM Plataforma ORDER BY rand() LIMIT 3";
+		$consulta = "SELECT idPlataforma, ImagenP FROM plataforma ORDER BY rand() LIMIT 3";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 	
 	//funcion que muestra todas las plataformas
 	function consultarPlataforma($conexion){
-		$consulta = "SELECT * FROM Plataforma ORDER BY idPlataforma";
+		$consulta = "SELECT * FROM plataforma ORDER BY idPlataforma";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion para consultar el id y nombre de la plataforma (selector de plataforma)
 	function consultaPlataformaVideojuego($conexion){
-		$consulta = "SELECT idPlataforma, Nombre FROM Plataforma";
+		$consulta = "SELECT idPlataforma, Nombre FROM plataforma";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion para mostrar la informacion de la plataformas
 	function infoPlataforma($conexion, $idPlataforma){
-		$consulta = "SELECT * FROM Plataforma WHERE idPlataforma='".$idPlataforma."'";
+		$consulta = "SELECT * FROM plataforma WHERE idPlataforma='".$idPlataforma."'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion para eliminar la videoconsola
 	function eliminarPlataforma($conexion, $id){
-		$consulta = "DELETE FROM Plataforma WHERE idPlataforma = '$id'";
+		$consulta = "DELETE FROM plataforma WHERE idPlataforma = '$id'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion para editar la videoconsola
 	function editarPlataforma($conexion, $lanzamiento, $precioP, $stockP, $DescripcionP, $imagenP, $logo, $nombre){
-		$consulta = "UPDATE Plataforma SET `Lanzamiento` = '$lanzamiento', `PrecioP` = '$precioP', `StockP` = '$stockP', `DescripcionP` = '$DescripcionP', `ImagenP` = '$imagenP' , `Logo` = '$logo' WHERE (`Nombre` = '$nombre');";
+		$consulta = "UPDATE plataforma SET `Lanzamiento` = '$lanzamiento', `PrecioP` = '$precioP', `StockP` = '$stockP', `DescripcionP` = '$DescripcionP', `ImagenP` = '$imagenP' , `Logo` = '$logo' WHERE (`Nombre` = '$nombre');";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
