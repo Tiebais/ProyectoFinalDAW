@@ -1,32 +1,32 @@
 <?php
 	//Funciones para el registro
 	function consultarUsuarios($conexion, $usuario){
-		$consulta = "SELECT * FROM Usuario WHERE Usuario = '$usuario'";
+		$consulta = "SELECT * FROM usuario WHERE Usuario = '$usuario'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function consultarCorreo($conexion, $email){
-		$consulta = "SELECT * FROM Usuario WHERE Email = '$email'";
+		$consulta = "SELECT * FROM usuario WHERE Email = '$email'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function consultarDni($conexion, $dni){
-		$consulta = "SELECT * FROM Usuario WHERE DNI = '$dni'";
+		$consulta = "SELECT * FROM usuario WHERE DNI = '$dni'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function insertarUsuarios($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI, $Direccion){
-		$consulta = "INSERT INTO Usuario(Usuario , Password, Nombre, Apellido1, Apellido2, Telefono, Email, CP, Provincia, ComunidadAutonoma, Rol, DNI, Direccion) VALUES ('$usuario', '$password', '$nombre', '$apellido1', '$apellido2', '$telefono', '$email', '$CP', '$provincia', '$CA','usuario', '$DNI', '$Direccion')";
+		$consulta = "INSERT INTO usuario(Usuario , Password, Nombre, Apellido1, Apellido2, Telefono, Email, CP, Provincia, ComunidadAutonoma, Rol, DNI, Direccion) VALUES ('$usuario', '$password', '$nombre', '$apellido1', '$apellido2', '$telefono', '$email', '$CP', '$provincia', '$CA','usuario', '$DNI', '$Direccion')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//Funciones login
 	function consultaLogin($conexion, $usuario, $password){
-		$consulta = "SELECT * FROM Usuario WHERE Usuario = '$usuario' AND Password = '$password'";
+		$consulta = "SELECT * FROM usuario WHERE Usuario = '$usuario' AND Password = '$password'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
@@ -54,51 +54,51 @@
 
 	//Funciones de recuperar contraseñas
 	function consultarRuperar($conexion, $usuario, $dni){
-		$consulta = "SELECT * FROM Usuario WHERE Usuario = '$usuario' AND DNI = '$dni'";
+		$consulta = "SELECT * FROM usuario WHERE Usuario = '$usuario' AND DNI = '$dni'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function modifcarContrasena($conexion, $usuario, $password, $dni){
-		$consulta = "UPDATE Usuario SET Password= '$password' WHERE Usuario = '$usuario' AND DNI = '$dni'";
+		$consulta = "UPDATE usuario SET Password= '$password' WHERE Usuario = '$usuario' AND DNI = '$dni'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 	
 	//funciones de usuario del panel de administrador
 	function consultarUsuario($conexion){
-		$consulta = "SELECT * FROM Usuario ORDER BY idUsuario";
+		$consulta = "SELECT * FROM usuario ORDER BY idUsuario";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function EliminarUsuario($conexion, $id){
-		$consulta = "DELETE FROM Usuario WHERE idUsuario = '$id'";
+		$consulta = "DELETE FROM usuario WHERE idUsuario = '$id'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function EditarUsuarioFromulario($conexion, $id){
-		$consulta = "SELECT * FROM Usuario WHERE idUsuario = '$id'";
+		$consulta = "SELECT * FROM usuario WHERE idUsuario = '$id'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function  insertarUsuarioAdmin($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI, $ROL){
-		$consulta = "INSERT INTO Usuario(Usuario , Password, Nombre, Apellido1, Apellido2, Telefono, Email, CP, Provincia, ComunidadAutonoma, Rol, DNI, Direccion) VALUES ('$usuario', '$password', '$nombre', '$apellido1', '$apellido2', '$telefono', '$email', '$CP', '$provincia', '$CA','$ROL', '$DNI', '$Direccion')";
+		$consulta = "INSERT INTO usuario(Usuario , Password, Nombre, Apellido1, Apellido2, Telefono, Email, CP, Provincia, ComunidadAutonoma, Rol, DNI, Direccion) VALUES ('$usuario', '$password', '$nombre', '$apellido1', '$apellido2', '$telefono', '$email', '$CP', '$provincia', '$CA','$ROL', '$DNI', '$Direccion')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function EditarUsuarioAdmin($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI, $ROL){
-		$consulta = "UPDATE Usuario SET Password='$password', Nombre='$nombre', Apellido1='$apellido1', Apellido2='$apellido2', Telefono='$telefono', 
+		$consulta = "UPDATE usuario SET Password='$password', Nombre='$nombre', Apellido1='$apellido1', Apellido2='$apellido2', Telefono='$telefono', 
 		Email='$email', CP='$CP', Provincia='$provincia', ComunidadAutonoma='$CA', Rol='$ROL', DNi='$DNI' WHERE Usuario = '$usuario'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	function EditarUsuario($conexion, $usuario, $password, $nombre, $apellido1, $apellido2, $telefono, $email, $CP, $provincia, $CA, $DNI){
-		$consulta = "UPDATE Usuario SET Password='$password', Nombre='$nombre', Apellido1='$apellido1', Apellido2='$apellido2', Telefono='$telefono', 
+		$consulta = "UPDATE usuario SET Password='$password', Nombre='$nombre', Apellido1='$apellido1', Apellido2='$apellido2', Telefono='$telefono', 
 		Email='$email', CP='$CP', Provincia='$provincia', ComunidadAutonoma='$CA', DNi='$DNI'  WHERE Usuario = '$usuario'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
