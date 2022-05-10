@@ -3,7 +3,7 @@
 	//funcion del carrousel
     function consultaVideojuegoCarrousel($conexion){
 		$consulta = "SELECT idVideojuego, Imagen FROM videojuego ORDER BY rand() LIMIT 3";
-		$resultado = mysqli_query($conexion, $consulta);v
+		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
