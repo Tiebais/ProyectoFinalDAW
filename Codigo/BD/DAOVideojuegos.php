@@ -2,37 +2,37 @@
 
 	//funcion del carrousel
     function consultaVideojuegoCarrousel($conexion){
-		$consulta = "SELECT idVideojuego, Imagen FROM Videojuego ORDER BY rand() LIMIT 3";
-		$resultado = mysqli_query($conexion, $consulta);
+		$consulta = "SELECT idVideojuego, Imagen FROM videojuego ORDER BY rand() LIMIT 3";
+		$resultado = mysqli_query($conexion, $consulta);v
 		return $resultado;
 	}
 
 	//funcion para mostrar los vodeojuegos de una plataforma
 	function datosVideojuegos($conexion, $IdPlataforma){
-		$consulta = "SELECT * FROM Productos INNER JOIN Videojuego
-		ON Videojuego.IdVideojuego = Productos.IdVideojuego
-		Where Productos.Idplataforma = '$IdPlataforma'";
+		$consulta = "SELECT * FROM productos INNER JOIN videojuego
+		ON videojuego.IdVideojuego = productos.IdVideojuego
+		Where productos.Idplataforma = '$IdPlataforma'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 	
 	//funcion para mostrar lo datos del videojuego
 	function infoVideojuegos($conexion, $idProductos){
-		$consulta = "SELECT * FROM Productos INNER JOIN Videojuego
-		ON Videojuego.IdVideojuego = Productos.IdVideojuego
-		INNER JOIN Plataforma
-		ON Plataforma.IdPlataforma = Productos.IdPlataforma
-		Where Productos.idProductos = '$idProductos'";
+		$consulta = "SELECT * FROM productos INNER JOIN videojuego
+		ON videojuego.IdVideojuego = productos.IdVideojuego
+		INNER JOIN plataforma
+		ON plataforma.IdPlataforma = productos.IdPlataforma
+		Where productos.idProductos = '$idProductos'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion del panel de administrador seccion videojuegos y plataforma
 	function consultaVideojuegosYPlataforma($conexion){
-		$consulta = "SELECT * FROM Productos INNER JOIN Videojuego
-		ON Videojuego.IdVideojuego = Productos.IdVideojuego
-		INNER JOIN Plataforma
-		ON Plataforma.IdPlataforma = Productos.IdPlataforma
+		$consulta = "SELECT * FROM productos INNER JOIN videojuego
+		ON videojuego.IdVideojuego = productos.IdVideojuego
+		INNER JOIN plataforma
+		ON plataforma.IdPlataforma = productos.IdPlataforma
 		ORDER BY idProductos";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
@@ -40,7 +40,7 @@
 
 	//funcion del panel de administrador seccion videojuegos y plataforma
 	function consultaVideojuegos($conexion){
-		$consulta = "SELECT * FROM Videojuego ORDER BY idVideojuego";
+		$consulta = "SELECT * FROM videojuego ORDER BY idVideojuego";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
