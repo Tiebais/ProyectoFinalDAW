@@ -28,5 +28,5 @@
     $conexion = conectar(false);
     $insertar = editarPlataforma($conexion, $lanzamiento, $precioP, $stockP, $descripcionP, $nombreImg, $nombreLogo, $nombre);
     mysqli_num_rows($insertar);
-    header ('Location: ../Admin.php');
+    header ('Location: ../admin.php');
 ?>
