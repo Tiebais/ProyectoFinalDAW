@@ -14,5 +14,5 @@
     $conexion = conectar(false);
     $insertar = editarVideojuegoPlataforma($conexion, $idVideojuego, $idPlataforma, $Stock, $Precio, $idProductos);
     mysqli_num_rows($insetar);
-    header ('Location: ../Admin.php');
+    header ('Location: ../admin.php');
 ?>
