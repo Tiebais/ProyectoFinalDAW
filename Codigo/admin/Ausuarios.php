@@ -51,7 +51,7 @@
         <td><?php echo $fila['CP']  ?></td>
         <td><?php echo $fila['Provincia']  ?></td>
         <td><?php echo $fila['ComunidadAutonoma']  ?></td>
-        <td><a href="./Codigo/EditarU.php?idUsuario=<?php echo $fila['idUsuario']; ?>" class="btn btn-raised btn-xs btn-success">Editar</a></a></td>
+        <td><a href="./EditarU.php?idUsuario=<?php echo $fila['idUsuario']; ?>" class="btn btn-raised btn-xs btn-success">Editar</a></a></td>
         <td><a href="./admin/EliminarU.php?idUsuario=<?php echo $fila['idUsuario']; ?>" class="btn btn-danger" d><i class="fa fa-trash"></i></a></td>
     </tr>
     <?php } ?>
