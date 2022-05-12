@@ -15,7 +15,6 @@
 		$conexion = mysqli_connect($servidor,$usuario,$password,$bd);
 
 		if ($conexion){
-			echo "Conexion exitosa <br>";
 			return $conexion;
 		} else {
 			echo "Error no se ha podido conectar con la BD <br>";
