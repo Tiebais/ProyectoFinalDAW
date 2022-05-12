@@ -8,8 +8,8 @@
     $idProductos=($_GET['idProductos']);
     $Stock = $_POST["Stock"];
     $Precio = $_POST["Precio"];
-    $idPlataforma = $_POST["Plataforma"];
-    $idVideojuego = $_POST["Videojuego"];
+    $idPlataforma = $_POST["plataforma"];
+    $idVideojuego = $_POST["videojuego"];
 
     $conexion = conectar(false);
     $insertar = editarVideojuegoPlataforma($conexion, $idVideojuego, $idPlataforma, $Stock, $Precio, $idProductos);
