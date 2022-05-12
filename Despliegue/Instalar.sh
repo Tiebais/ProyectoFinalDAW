@@ -25,3 +25,4 @@ mysqladmin -u $USERDB -p$USERDB create $BBDD
 mysql -u $USERDB -p$USERDB $BBDD < ../DataBase/$DATOS
 # Mostramos url de carga
 echo "http://$HOST/Codigo/index.php"
+sudo chmod +777 /var/www/html/Codigo/img
