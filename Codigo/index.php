@@ -30,14 +30,14 @@
 							$consulta = consultarPlataformaCarrousel($conexion);
 							$i = 0;
 							while($fila = mysqli_fetch_assoc($consulta))
-							{}
+							{
 						?>
 						<div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
 							<img src="./img/Plataforma/Imagenes/<?php echo $fila['ImagenP'];?>" alt="Plataforma" style="width:100%; height:400px;">
 						</div>
 						<?php
 								$i++;
-						{}
+							}
 						?>
 					</div>
 					<a class="carousel-control-prev" href="#demo" data-slide="prev">
