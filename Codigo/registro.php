@@ -66,18 +66,6 @@
                     </div>
 
                     <div class="form-group col-8 col-md-5">
-                        <label for="DNI" class="visually-hidden">Feche de nacimiento</label>
-                        <input id="DNi" type="text" class="form-control" name="Fecha" placeholder="Fecha" required>
-                        <span id="errorFecha">Introducir una fecha valida</span>
-                    </div>
-
-                    <div class="form-group col-8 col-md-5">
-                        <label for="DNI" class="visually-hidden">Direccion</label>
-                        <input id="DNi" type="text" class="form-control" name="DNI" placeholder="Direccion" required>
-                        <span id="errorDNi">Introduce una direccion valida</span>
-                    </div>
-
-                    <div class="form-group col-8 col-md-5">
                         <label for="Telefono" class="visually-hidden">Telefono</label>
                         <input id="telefono" type="text" class="form-control" name="telefono" placeholder="Telefono" required>
                         <span id="errorTelefono">Introduce un telefono valido</span> 
