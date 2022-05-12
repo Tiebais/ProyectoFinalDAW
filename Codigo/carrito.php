@@ -39,7 +39,7 @@
                 <?php
                     $conexion = conectar(false);
                     $consulta= consultarPlataforma($conexion);
-                    while($fila=mysqli_fetch_array($consulta)){
+                    while($fila=mysqli_fetch_array($consulta)){}
                 ?>
                   <tr>
                     <td class="product-thumbnail">
