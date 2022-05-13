@@ -47,56 +47,56 @@
 
 	//funcion para consultar si existe el Titulo del videojuego
 	function consultaTitulo($conexion, $Titulo){
-		$consulta = "SELECT * FROM Videojuego WHERE Titulo= '$Titulo'";
+		$consulta = "SELECT * FROM videojuego WHERE Titulo= '$Titulo'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//crea un nuevo videojuego 
 	function nuevoVideojuego($conexion, $Titulo, $Compania, $Publicacion, $Descripcion, $nombreImg){
-		$consulta = "INSERT INTO Videojuego VALUES (default, '$Titulo', '$Compania', '$Publicacion', '$Descripcion', '$nombreImg')";
+		$consulta = "INSERT INTO videojuego VALUES (default, '$Titulo', '$Compania', '$Publicacion', '$Descripcion', '$nombreImg')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion para obtener datos del videojuegos
 	function infoVideojuegosEdit($conexion, $idVideojuego){
-		$consulta = "SELECT * FROM Videojuego WHERE idVideojuego= '$idVideojuego'";
+		$consulta = "SELECT * FROM videojuego WHERE idVideojuego= '$idVideojuego'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion para obtener datos del videojuegos
 	function eliminarVideojuego($conexion, $idVideojuego){
-		$consulta = "DELETE FROM Videojuego WHERE idVideojuego= '$idVideojuego'";
+		$consulta = "DELETE FROM videojuego WHERE idVideojuego= '$idVideojuego'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion para editar un videojuego
 	function editarVideojuego($conexion, $Compania, $Publicacion, $Descripcion, $imagen, $Titulo){
-		$consulta = "UPDATE Videojuego SET `Compania` = '$Compania', `Publicacion` = '$Publicacion', `Descripcion` = '$Descripcion', `Imagen` = '$imagen'  WHERE (`Titulo` = '$Titulo')";
+		$consulta = "UPDATE videojuego SET `Compania` = '$Compania', `Publicacion` = '$Publicacion', `Descripcion` = '$Descripcion', `Imagen` = '$imagen'  WHERE (`Titulo` = '$Titulo')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	//funcion que agrega un nuevo producto
 	function nuevoVideojuegoPlataforma($conexion, $idVideojuego, $idPlataforma, $Stock, $Precio){
-		$consulta = "INSERT INTO Productos VALUES (default, '$idVideojuego', '$idPlataforma', '$Stock', '$Precio')";
+		$consulta = "INSERT INTO productos VALUES (default, '$idVideojuego', '$idPlataforma', '$Stock', '$Precio')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	// eliminar un producto
 	function eliminarVideojuegoPlataforma($conexion, $idProductos){
-		$consulta = "DELETE FROM Productos WHERE idProductos= '$idProductos'";
+		$consulta = "DELETE FROM productos WHERE idProductos= '$idProductos'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 
 	// eliminar un producto
 	function editarVideojuegoPlataforma($conexion, $idVideojuego, $idPlataforma, $Stock, $Precio, $idProductos){
-		$consulta = "UPDATE Productos SET `idVideojuego` = '$idVideojuego', `idPlataforma` = '$idPlataforma', `Stock` = '$Stock', `Precio` = '$Precio'  WHERE (`idProductos` = '$idProductos')";
+		$consulta = "UPDATE productos SET `idVideojuego` = '$idVideojuego', `idPlataforma` = '$idPlataforma', `Stock` = '$Stock', `Precio` = '$Precio'  WHERE (`idProductos` = '$idProductos')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
