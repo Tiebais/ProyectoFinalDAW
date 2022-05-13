@@ -96,7 +96,7 @@
 
 	// eliminar un producto
 	function editarVideojuegoPlataforma($conexion, $idVideojuego, $idPlataforma, $Stock, $Precio, $idProductos){
-		$consulta = "UPDATE productos SET `idVideojuego` = '$idVideojuego', `idPlataforma` = '$idPlataforma', `Stock` = '$Stock', `Precio` = '$Precio'  WHERE (`idProductos` = '$idProductos')";
+		$consulta = "UPDATE productos SET idVideojuego = '$idVideojuego', idPlataforma = '$idPlataforma', Stock = '$Stock', Precio = '$Precio'  WHERE (idProductos = '$idProductos')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
