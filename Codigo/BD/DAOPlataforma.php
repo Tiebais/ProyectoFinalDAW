@@ -43,14 +43,14 @@
 
 	//funcion para consultar si existe el nombre de la plataforma
 	function consultaNombre($conexion, $Nombre){
-		$consulta = "SELECT * FROM Plataforma WHERE Nombre= '$Nombre'";
+		$consulta = "SELECT * FROM plataforma WHERE Nombre= '$Nombre'";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
 	
 	//crea una nueva plataforma 
 	function nuevaPlataforma($conexion, $nombre, $lanzamiento, $precioP, $stockP, $descripcionP, $nombreImg, $nombreLogo){
-		$consulta = "INSERT INTO Plataforma VALUES (default, '$nombre', '$lanzamiento', '$precioP', '$stockP', '$descripcionP', '$nombreImg', '$nombreLogo')";
+		$consulta = "INSERT INTO plataforma VALUES (default, '$nombre', '$lanzamiento', '$precioP', '$stockP', '$descripcionP', '$nombreImg', '$nombreLogo')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
