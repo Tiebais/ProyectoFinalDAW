@@ -24,7 +24,7 @@
     <div class="contenedor">
     <?php include './inc/nav.php'; ?>
     <main>
-        <form name="formulario" method="post" action="./admin/Editar_videojuegoyplataforma.php?idProductos=<?php echo $idProductos ?>" id="loginform" enctype="multipart/form-data">
+        <form name="formulario" method="post" action="./admin/Editar_videojuegoYplataforma.php?idProductos=<?php echo $idProductos ?>" id="loginform" enctype="multipart/form-data">
             <div class="container row justify-content-center">
 
                 <h1 class="col-8 text-center">Editar Videojuego y su plataforma</h1>
