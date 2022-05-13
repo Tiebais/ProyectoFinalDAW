@@ -36,7 +36,7 @@
 
 	//funcion para editar la videoconsola
 	function editarPlataforma($conexion, $lanzamiento, $precioP, $stockP, $DescripcionP, $imagenP, $logo, $nombre){
-		$consulta = "UPDATE plataforma SET `Lanzamiento` = '$lanzamiento', `PrecioP` = '$precioP', `StockP` = '$stockP', `DescripcionP` = '$DescripcionP', `ImagenP` = '$imagenP' , `Logo` = '$logo' WHERE (`Nombre` = '$nombre');";
+		$consulta = "UPDATE plataforma SET Lanzamiento = '$lanzamiento', PrecioP = '$precioP', StockP = '$stockP', DescripcionP = '$DescripcionP', ImagenP = '$imagenP' , Logo = '$logo' WHERE (Nombre = '$nombre');";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
