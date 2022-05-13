@@ -11,7 +11,7 @@
     require "./BD/conector_bd.php";
     require "./BD/DAOPlataforma.php";
     require "./BD/DAOVideojuegos.php";
-    $idProductos=($_GET['idProductos']);
+    $idProductos=$_GET['idProductos'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
