@@ -75,7 +75,7 @@
 
 	//funcion para editar un videojuego
 	function editarVideojuego($conexion, $Compania, $Publicacion, $Descripcion, $imagen, $Titulo){
-		$consulta = "UPDATE videojuego SET `Compania` = '$Compania', `Publicacion` = '$Publicacion', `Descripcion` = '$Descripcion', `Imagen` = '$imagen'  WHERE (`Titulo` = '$Titulo')";
+		$consulta = "UPDATE videojuego SET Compania = '$Compania', Publicacion = '$Publicacion', Descripcion = '$Descripcion', Imagen = '$imagen'  WHERE (Titulo = '$Titulo')";
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
