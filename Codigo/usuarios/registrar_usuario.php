@@ -1,6 +1,6 @@
 <?php
-    require "../BD/conector_bd.php";
-    require "../BD/DAOUsuario.php";
+    require_once "../BD/conector_bd.php";
+    require_once "../BD/DAOUsuario.php";
 
 
     //Recogemos los valores del formulario.
