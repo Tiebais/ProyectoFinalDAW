@@ -22,7 +22,7 @@
     <div class="contenedor">
     <?php include './inc/nav.php'; ?>
         <main>
-            <form name="formulario" method="post" action="./usuarios/editar_usuario.php" id="loginform" onsubmit="return validarFormulario();">
+            <form name="formulario" method="post" action="usuarios/editar_usuario.php" id="loginform" onsubmit="return validarFormulario();">
                 <div class="container row justify-content-center">
 
                     <h1 class="col-8 text-center">Ajustes de usuario</h1>
