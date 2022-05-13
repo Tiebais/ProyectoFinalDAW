@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require "../BD/conector_bd.php";
     require "../BD/DAOUsuario.php";
     
