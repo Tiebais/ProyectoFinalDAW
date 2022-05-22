@@ -31,7 +31,7 @@
                         $conexion = conectar(false);
                         $idUsuario=($_SESSION['idUsuario']);
                         $consulta= EditarUsuarioFromulario($conexion, $idUsuario);
-                        while($fila=mysqli_fetch_array($consulta)){
+                        $fila=mysqli_fetch_array($consulta);
                     ?>
 
                     <div class="form-group col-8 col-md-5">
@@ -104,9 +104,7 @@
                         <input id="CA" type="text" class="form-control" name="CA" placeholder="Comunidad Autonoma" value="<?php echo $fila['ComunidadAutonoma']?>" required readonly="readonly">
                     </div>
 
-                    <?php 
-                        }
-                    ?>
+                   
 
                     <button class="col-5 col-md-4 btn btn-primary" type="submit">Editar</button>
                     <p class="mt-5 mb-3 text-muted"></p>

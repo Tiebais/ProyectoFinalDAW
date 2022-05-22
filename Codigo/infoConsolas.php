@@ -44,8 +44,10 @@
                                     <label class="text-center"><small>Agrega la cantidad de productos que añadiras al carrito de compras (Maximo '.$fila['StockP'].' productos)</small></label>
                                     <div class="form-group">
                                         <input type="number" class="form-control" value="1" min="1" max="'.$fila['StockP'].'" name="cantidad">
+                                        <input type="hidden" name="idConsola" value="'.$fila['idPlataforma'].'">
+                                        <input type="hidden" name="precioConsola" value="'.$fila['PrecioP'].'">
                                     </div>
-                                    <button class="btn btn-lg btn-raised btn-success btn-block"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp; Añadir al carrito</button>
+                                    <input type="submit" class="btn btn-lg btn-primary btn-raised btn-block" name="anadirConsola" value="Añadir al carrito">
                                 </form>
                                 <div class="ResForm"></div>';
                             }else{
