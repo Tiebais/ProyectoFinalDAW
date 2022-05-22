@@ -79,36 +79,18 @@
 
                     <div class="form-group col-8 col-md-5">    
                         <label for="CP" class="visually-hidden">Codigo postal</label>
-                        <select id="CP" type="CP" class="form-control" name="CP" placeholder="Codigo postal" required >
-                             <option value="0">Seleccione una opción</option>
-                        </select>
+                        <input id="CP" type="CP" class="form-control" name="CP" placeholder="Codigo postal" required >
                         <span id="errorCodigoPostal">Introduce un codigo postal valido</span>
                     </div>
                     
                     <div class="form-group col-8 col-md-5">
                         <label for="Provincia" class="visually-hidden">Provincia</label>
-                        <select id="provincia" type="text" class="form-control" name="provincia" placeholder="Provincia" required readonly="readonly">
-                            <option value="0">Seleccione una opción</option>
-                        </select>
+                        <input id="provincia" type="text" class="form-control" name="provincia" placeholder="Provincia" required readonly="readonly">
                     </div>
 
                     <div class="form-group col-8 col-md-5">
                         <label for="CA" class="visually-hidden">Comunidad Autonoma</label>
-                        <select id="CA" type="text" class="form-control" name="CA" placeholder="Comunidad Autonoma" required readonly="readonly">
-                            <option value="0">Seleccione una opción</option>
-                            <option value="Aragon">Aragón</option>
-                            <option value="Baleares">Baleares</option>
-                            <option value="Cantabria">Cantabria</option>
-                            <option value="CastillayLeon">Castilla y León</option>
-                            <option value="Rioja">Rioja</option>
-                            <option value="Extremadura">Extremadura</option>
-                            <option value="Ceuta">Ceuta</option>
-                            <option value="Melilla">Melilla</option>
-                            <option value="cataluna">cataluña</option>
-                            <option value="Madrid">Madrid</option>
-                            <option value="Navarra">Navarra</option>
-                            <option value="andalucia">Andalucia</option>
-                        </select>
+                        <input id="CA" type="text" class="form-control" name="CA" placeholder="Comunidad Autonoma" required readonly="readonly">
                     </div>
 
                     <button class="col-5 col-md-4 btn btn-primary" type="submit">Registrarse</button>
