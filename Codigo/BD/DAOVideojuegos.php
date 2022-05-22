@@ -15,7 +15,32 @@
 		$resultado = mysqli_query($conexion, $consulta);
 		return $resultado;
 	}
-	
+	function insertarVideojuegoCarrito($conexion,$idCesta,$idCliente,$Cantidad,$PrecioItem,$idProducto){
+		$consulta = "INSERT IGNORE cesta(idCesta, idCliente) values ('$idCesta','$idCliente')";
+		$resultado = mysqli_query($conexion,$consulta);
+		$consulta2="INSERT INTO item (Cantidad, PrecioItem, idCesta, tipo, id) values ('$Cantidad','$PrecioItem','$idCesta',1,$idProducto)";
+		$resultado2=mysqli_query($conexion,$consulta2);
+		$consulta3="update productos set Stock=Stock-$Cantidad where idProductos='$idProducto'";
+		$resultado3=mysqli_query($conexion,$consulta3);
+		$precioT=$PrecioItem*$Cantidad;
+		$consulta4="UPDATE `cesta` SET `PrecioTotal`=`PrecioTotal`+$precioT where `cesta`.`idCesta`='$idCesta'";
+		$resultado4=mysqli_query($conexion,$consulta4);
+		return $resultado4;
+	}
+	function eliminarJuegoCesta($conexion,$idItem,$idJuego,$precio,$cantidad,$idCesta){
+		$consulta = "DELETE FROM item WHERE id=$idItem";
+		$resultado = mysqli_query($conexion, $consulta);
+		$consulta1 = "UPDATE cesta SET PrecioTotal=PrecioTotal-($cantidad*$precio) WHERE idCesta='$idCesta'";
+		$resultado1 = mysqli_query($conexion, $consulta1);
+		$consulta2 = "UPDATE productos SET Stock=Stock+$cantidad WHERE idProductos=$idJuego";
+		$resultado2 = mysqli_query($conexion, $consulta2);
+		return $resultado;
+	}
+	function consultaPrecioCesta($conexion,$idCesta){
+		$consulta = "SELECT PrecioTotal from cesta WHERE idCesta=$idCesta";
+		$resultado = mysqli_query($conexion, $consulta);
+		return $resultado;
+	}
 	//funcion para mostrar lo datos del videojuego
 	function infoVideojuegos($conexion, $idProductos){
 		$consulta = "SELECT * FROM productos INNER JOIN videojuego
