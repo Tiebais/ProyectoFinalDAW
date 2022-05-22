@@ -155,7 +155,10 @@
                     <strong class="text-black"><?php echo $precio['PrecioTotal'] ?></strong>
                   </div>
                 </div>
-
+		<div class="col-12 col-sm-6">
+                      echo '<br>
+		      <a href="consolas.php" class="btn btn-lg btn-primary btn-raised btn-block"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;Regresar a la tienda</a>
+	 	</div>'; 
                 
             </div>
           </div>
