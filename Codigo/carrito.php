@@ -143,7 +143,7 @@
             <div class="row justify-content-end">
               <div class="col-12 col-sm-6">
                 <div class="row">
-                  <div class="col-md-12 text-right border-bottom mb-5">
+                  <div class="col-md-6 text-right border-bottom mb-5">
                     <h3 class="text-black h4 text-uppercase">PRECIO</h3>
                   </div>
                 </div>
@@ -160,8 +160,7 @@
             </div>
           </div>
         </div>
-		<div class="col-12 col-sm-6">
-                      <echo '<br>
+		<div class="col-6 col-sm-6">
 		      <a href="consolas.php" class="btn btn-lg btn-primary btn-raised btn-block"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;Regresar a la tienda</a>
 	 	</div>';
       </div>
