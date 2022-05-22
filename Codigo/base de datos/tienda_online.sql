@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2021 a las 14:58:33
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Servidor: localhost:3306
+-- Tiempo de generación: 22-05-2022 a las 16:01:20
+-- Versión del servidor: 5.7.24
+-- Versión de PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -43,7 +44,9 @@ CREATE TABLE `item` (
   `idItem` int(11) NOT NULL,
   `Cantidad` int(11) NOT NULL,
   `PrecioItem` decimal(10,0) NOT NULL,
-  `idCesta` int(11) NOT NULL
+  `idCesta` int(11) NOT NULL,
+  `tipo` int(11) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -68,7 +71,7 @@ CREATE TABLE `plataforma` (
 --
 
 INSERT INTO `plataforma` (`idPlataforma`, `Nombre`, `Lanzamiento`, `PrecioP`, `StockP`, `DescripcionP`, `ImagenP`, `Logo`) VALUES
-(1, 'Nintendo 64', '1996-06-23', 210, 5, 'Nintendo 64 es la cuarta videoconsola de sobremesa producida por Nintendo, desarrollada para suceder a la Super Nintendo y para competir con el Saturn de Sega y la PlayStation de Sony.  Incorpora en su arquitectura un procesador principal de 64 bits. El soporte de almacenamiento de los juegos es en forma de cartuchos, la mayoría de ellos con memoria interna. El uso de este tipo de almacenamiento le supuso una seria desventaja comercial frente a sus competidores, ya que encarecía los costes de producción lo que aumentaba el precio final, y además, era de una capacidad de almacenamiento menor al de un CD-ROM.  Técnicamente, la utilización de cartuchos ofrece algunas ventajas frente al formato CD-ROM, siendo esta la idea que mantenía Nintendo frente a la competencia. El cartucho tiene tiempos de acceso al sistema mucho más cortos, hace posible la inclusión de coprocesadores y otros chips dentro del cartucho y técnicas como streaming en tiempo real para mejorar las capacidades de los juegos, logrando ampliar su vida útil; y en un principio parecía que podría ser más económico por no pagar derechos (', 'nintendo64.jpg', 'Nintendo64.jpg'),
+(1, 'Nintendo 64', '1996-06-23', 210, 3, 'Nintendo 64 es la cuarta videoconsola de sobremesa producida por Nintendo, desarrollada para suceder a la Super Nintendo y para competir con el Saturn de Sega y la PlayStation de Sony.  Incorpora en su arquitectura un procesador principal de 64 bits. El soporte de almacenamiento de los juegos es en forma de cartuchos, la mayoría de ellos con memoria interna. El uso de este tipo de almacenamiento le supuso una seria desventaja comercial frente a sus competidores, ya que encarecía los costes de producción lo que aumentaba el precio final, y además, era de una capacidad de almacenamiento menor al de un CD-ROM.  Técnicamente, la utilización de cartuchos ofrece algunas ventajas frente al formato CD-ROM, siendo esta la idea que mantenía Nintendo frente a la competencia. El cartucho tiene tiempos de acceso al sistema mucho más cortos, hace posible la inclusión de coprocesadores y otros chips dentro del cartucho y técnicas como streaming en tiempo real para mejorar las capacidades de los juegos, logrando ampliar su vida útil; y en un principio parecía que podría ser más económico por no pagar derechos (', 'nintendo64.jpg', 'Nintendo64.jpg'),
 (2, 'Nintendo Switch', '2017-03-17', 329, 25, 'Nintendo Switch  es la octava consola de videojuegos principal desarrollada por Nintendo. Conocida en el desarrollo por su nombre código «NX», se dio a conocer en octubre de 2016 y fue lanzada mundialmente el 3 de marzo de 2017. Nintendo considera a Switch una consola híbrida. Se puede utilizar como consola de sobremesa con la unidad principal insertada en una estación de acoplamiento para conectarla con un televisor. Alternativamente, puede ser extraída de la base y utilizada de forma similar a una tableta a través de su pantalla táctil LCD, o colocada sobre una superficie gracias a su soporte plástico integrado siendo así visible por varios jugadores. La Switch utiliza dos controladores inalámbricos llamados en conjunto Joy-Con, que incluyen cuatro botones de acción estándar y un joystick direccional, así como sensores para la detección de movimiento y retroalimentación táctil de alta definición, aunque se diferencian en algunos botones y características adicionales. Dos Joy-Con pueden conectarse uno a cada lado de la consola para usarse como consola portátil, conectarse al accesorio Grip proporcionado junto a la consola para usarlos como un mando más tradicional, o ser utilizados individualmente en la mano como el mando Wii, y de esta forma usarse con juegos multijugador locales. También puede utilizar ciertos controles inalámbricos y/o alámbricos que no incluye la consola, adoptado como Pro Controller, que incluyen las mismas características que los mandos tradicionales a excepción de que este incluye detección NFC para Amiibo y vibración HD. Los juegos para esta consola y otras aplicaciones están disponibles como cartuchos físicos ROM de flash y como distribución digital, y no utilizan bloqueo de región, por lo que puedes comprar juegos de cualquier mercado.', 'nintendoswitch.jpg', ''),
 (3, 'Playstation 5', '2020-11-23', 499, 0, 'PlayStation 5 es una consola de videojuegos de sobremesa desarrollada por Sony Interactive Entertainment. Es la sucesora de la PlayStation 4, y se lanzó el 12 de noviembre de 2020 en Norteamérica, Japón, Australasia y Corea del Sur, mientras que fue lanzada el 19 de noviembre de 2020 en el resto del mundo. Es la quinta consola de sobremesa de la marca PlayStation y la tercera en ser diseñada por Mark Cerny. Desde su lanzamiento la consola ha contado con dos modelos: una consola PlayStation 5 con lector de discos BD UHD-ROM y también para la función multimedia, y una versión digital llamada, PlayStation 5 Digital Edition sin el lector. La consola PS5 compite contra las consolas Xbox Series X|S de Microsoft y Switch de Nintendo para abrir paso a la novena generación de videojuegos. La PlayStation 5 utiliza el mismo tipo de CPU de la marca AMD que la PlayStation 4, pero introduce una unidad de estado sólido (SSD) personalizada diseñada para la transmisión de datos de alta velocidad que permiten mejoras significativas en el rendimiento gráfico. El hardware también incluye una GPU AMD personalizada que posibilita la renderización por trazado de rayos, soporte para pantallas de resolución 4K y una alta tasa de fotogramas por segundo, efectos de audio 3D en tiempo real y retrocompatibilidad con la mayoría de los videojuegos para PlayStation 4 y PlayStation VR. ', 'ps5.jpg', ''),
 (4, 'Playstation 4', '2013-11-29', 399, 15, 'PlayStation 4 oficialmente abreviada como PS4) es la cuarta videoconsola del modelo PlayStation.8 Es la segunda consola de Sony en ser diseñada por Mark Cerny y forma parte de las videoconsolas de octava generación. Fue anunciada oficialmente el 20 de febrero de 2013 en el evento PlayStation Meeting 2013,9 aunque el diseño de la consola no fue presentado hasta el 10 de junio en el E3 2013.10 Es la sucesora de la PlayStation 3 y compite con Wii U y Switch de Nintendo y Xbox One de Microsoft. Su lanzamiento fue el 15 de noviembre de 2013 en Estados Unidos y en Europa y Sudamérica fue el 29 de noviembre de 2013,119 mientras que en Japón fue el 22 de febrero de 2014.2 \r\nAlejándose de la compleja arquitectura utilizada en el procesador Cell de la videoconsola PlayStation 3, la PlayStation 4 cuenta con un procesador AMD de 8 núcleos bajo la arquitectura x86-64. Estas instrucciones x86-64 están diseñados para hacer más fácil el desarrollo de videojuegos en la consola de nueva generación, que atrae a un mayor número de desarrolladores. Estos cambios ponen de manifiesto el esfuerzo de Sony para mejorar las lecciones aprendidas durante el desarrollo, la producción y el lanzamiento de la PS3. Otras características de hardware notables de la PS4 es que incluyen 8 GB de memoria unificada GDDR5, una unidad de disco Blu-ray más rápido, y los chips personalizados dedicados a tareas de procesamiento de audio, vídeo y de fondo. \r\nEntre las nuevas aplicaciones y servicios, Sony lanzó la aplicación PlayStation App, permitiendo a los que tengan una PS4 convertir los teléfonos inteligentes y las tabletas en una segunda pantalla para mejorar la jugabilidad o en teclados externos para más comodidad en el momento de escribir. La compañía también planeaba debutar con Gaikai, un servicio de juego basado en la nube que aloja contenidos y juegos descargables. Mediante la incorporación del botón \"Share\" en el nuevo controlador hace que sea posible compartir en cualquier momento capturas de pantalla, trofeos, compras o videos en páginas como Facebook, Twitter y hacer stream de lo que se juegue y ver el de otros amigos en directo desde Ustream o Twitch, Sony planeó colocar más énfasis en el juego social. La consola PS4 el primer día de su lanzamiento vendió más de 1 millón de consolas solo en territorio de los Estados Unidos.12 Al inicio de su conferencia de prensa en la Gamescom 2014, Sony anunció que ya había vendido más de 10 000 000 unidades de la PlayStation 4 en el mundo a usuarios finales. Está diseñada para la amplia integración con PlayStation Vita.\r\n', 'ps4.jpg', ''),
@@ -93,32 +96,33 @@ CREATE TABLE `productos` (
   `IdVideojuego` int(11) NOT NULL,
   `IdPlataforma` int(11) NOT NULL,
   `Stock` int(11) NOT NULL,
-  `Precio` varchar(45) COLLATE utf8_bin DEFAULT NULL
+  `Precio` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  `tipo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`idProductos`, `IdVideojuego`, `IdPlataforma`, `Stock`, `Precio`) VALUES
-(2, 1, 7, 14, '45.90'),
-(3, 2, 1, 12, '85.90'),
-(4, 2, 7, 8, '45.90'),
-(5, 3, 6, 15, '59.90'),
-(6, 3, 8, 23, '59.90'),
-(7, 4, 2, 55, '59.90'),
-(8, 5, 5, 23, '45.90'),
-(9, 6, 4, 12, '39.90'),
-(10, 7, 3, 200, '79.90'),
-(11, 8, 9, 1, '45.90'),
-(12, 8, 7, 13, '30.90'),
-(13, 10, 10, 125, '69.90'),
-(14, 11, 11, 0, '200'),
-(15, 11, 7, 23, '45.90'),
-(16, 11, 8, 12, '35.90'),
-(19, 16, 10, 100000, '0'),
-(26, 17, 33, 5, '40'),
-(33, 28, 35, 15, '25');
+INSERT INTO `productos` (`idProductos`, `IdVideojuego`, `IdPlataforma`, `Stock`, `Precio`, `tipo`) VALUES
+(2, 1, 7, 9, '45.90', NULL),
+(3, 2, 1, 15, '85.90', NULL),
+(4, 2, 7, 10, '45.90', NULL),
+(5, 3, 6, 15, '59.90', NULL),
+(6, 3, 8, 23, '59.90', NULL),
+(7, 4, 2, 44, '59.90', NULL),
+(8, 5, 5, 25, '45.90', NULL),
+(9, 6, 4, 11, '39.90', NULL),
+(10, 7, 3, 200, '79.90', NULL),
+(11, 8, 9, 1, '45.90', NULL),
+(12, 8, 7, 13, '30.90', NULL),
+(13, 10, 10, 125, '69.90', NULL),
+(14, 11, 11, 0, '200', NULL),
+(15, 11, 7, 23, '45.90', NULL),
+(16, 11, 8, 12, '35.90', NULL),
+(19, 16, 10, 100000, '0', NULL),
+(26, 17, 33, 5, '40', NULL),
+(33, 28, 35, 15, '25', NULL);
 
 -- --------------------------------------------------------
 
@@ -148,7 +152,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idUsuario`, `Usuario`, `Password`, `Nombre`, `Apellido1`, `Apellido2`, `Telefono`, `Email`, `CP`, `Provincia`, `ComunidadAutonoma`, `Rol`, `DNI`, `Direccion`) VALUES
-(32, 'Admin545212', 'Alumn@2020', 'María', 'Muñoz', 'eee', '674645964', 'maria2020@gmail.com', '52005', 'Melilla', 'Melilla', 'admin', '07093244K', 'Carretera Alfonso XIII n°59 3°A'),
+(32, 'Admin545212', 'Alumn@2020', 'María', 'Muñoz', 'eee', '674645945', 'maria2020@gmail.com', '52005', 'Melilla', 'Melilla', 'admin', '07093244K', 'Carretera Alfonso XIII n°59 3°A'),
 (33, 'Tiebais', 'Alumn@2020', 'Tieb', 'Aissa', 'Aissa', '666699863', 'alumno@gmail.com', '52001', 'Melilla', 'Melilla', 'usuario', '45311340Y', '');
 
 -- --------------------------------------------------------
@@ -160,7 +164,7 @@ INSERT INTO `usuario` (`idUsuario`, `Usuario`, `Password`, `Nombre`, `Apellido1`
 CREATE TABLE `videojuego` (
   `idVideojuego` int(11) NOT NULL,
   `Titulo` varchar(45) COLLATE utf8_bin NOT NULL,
-  `Compañia` varchar(45) COLLATE utf8_bin NOT NULL,
+  `Compania` varchar(45) COLLATE utf8_bin NOT NULL,
   `Publicacion` date NOT NULL,
   `Descripcion` longtext COLLATE utf8_bin NOT NULL,
   `Imagen` varchar(2050) COLLATE utf8_bin DEFAULT NULL COMMENT 'Url de la imagen de la carátula del juego'
@@ -170,7 +174,7 @@ CREATE TABLE `videojuego` (
 -- Volcado de datos para la tabla `videojuego`
 --
 
-INSERT INTO `videojuego` (`idVideojuego`, `Titulo`, `Compañia`, `Publicacion`, `Descripcion`, `Imagen`) VALUES
+INSERT INTO `videojuego` (`idVideojuego`, `Titulo`, `Compania`, `Publicacion`, `Descripcion`, `Imagen`) VALUES
 (1, 'The Legend of Zelda: Ocarina of Time', 'Nintendo', '1998-11-28', 'The Legend of Zelda: Ocarina of Time 3D lleva al clásico para Nintendo 64 (uno de los videojuegos más alabados por la crítica de todos los tiempos) a la consola Nintendo 3DS y le añade la profundidad y el realismo de unos impresionantes gráficos 3D sin gafas. Link se embarca en un periplo de leyenda a través del tiempo para detener a Ganondorf, el rey de los ladrones Gerudo, que busca la Triforce: una reliquia sagrada que otorga poder ilimitado a su poseedor.Las mejoras gráficas y la profundidad tridimensional insuflan una nueva vida al vasto mundo de Hyrule. Una intuitiva interfaz mejorada, combinada con la sencilla navegación que ofrecen los gráficos tridimensionales te darán más control a la hora de resolver puzles, viajar en el tiempo y explorar este envolvente mundo. Ya seas veterano o neófito en Hyrule, The Legend of Zelda: Ocarina of Time 3D es una aventura que te resultará totalmente nueva.Características:     Un Zelda clásico en 3D sin gafas: Una de las franquicias más populares vuelve a la vida con increíbles gráficos 3D y una completa puesta a punto artística, poniéndote en la palma de la mano este asombroso mundo para que lo explores cuando tú quieras.    Nuevos controles basados en la tecnología de la consola Nintendo 3DS: The Legend of Zelda: Ocarina of Time 3D mantiene el control analógico del original, usando el botón deslizante de Nintendo 3DS, pero el sistema de inventario es mucho más fácil de usar gracias a la pantalla táctil. Nunca ha sido tan facil y rápido cambiar de objetos.    También tienes la posibilidad de usar el sensor de giro para controlar la cámara para disparar.The Legend of Zelda: Ocarina of Time 3D lleva al clásico para Nintendo 64 (uno de los videojuegos más alabados por la crítica de todos los tiempos) a la consola Nintendo 3DS y le añade la profundidad y el realismo de unos impresionantes gráficos 3D sin gafas.Link se embarca en un periplo de leyenda a través del tiempo para detener a Ganondorf, el rey de los ladrones Gerudo, que busca la Triforce: una reliquia sagrada que otorga poder ilimitado a su poseedor.Las mejoras gráficas y la profundidad tridimensional insuflan una nueva vida al vasto mundo de Hyrule. Una intuitiva interfaz mejorada, combinada con la sencilla navegación que ofrecen los gráficos tridimensionales te darán más control a la hora de resolver puzles, viajar en el tiempo y explorar este envolvente mundo. Ya seas veterano o neófito en Hyrule, The Legend of Zelda: Ocarina of Time 3D es una aventura que te resultará totalmente nueva.', 'mariokartwiiu.jpg'),
 (2, 'The Legend of Zelda: Majora\'s Mask', 'Nintendo', '2000-04-27', '\n\nEl remake del clásico de Nintendo 64 lanzado en el año 2000, continuación del videojuego The Legend of Zelda: Ocarina of Time, que la comunidad de jugadores estaba esperando.\n\nEste título tan aclamado por los seguidores de la serie The Legend of Zelda está considerado una de las aventuras más grandiosas y oscuras en las que el heróe Link se verá envuelto. En él deberás recorrer parajes que avanzan sin remisión hacia un destino fatal, poniéndote varias máscaras para transformarte y adquirir todo tipo de capacidades especiales, resolver enrevesados puzles, explorar complejas mazmorras y combatir feroces enemigos.\n\nÚnete a Link en su afán por evitar que el mundo de Términa se vea abocado a un infausto desenlace: en 72 horas, la luna se estrellará contra él y arrasará con todo lo que encuentre a su paso. Ayudándose de la mágica Ocarina del Tiempo, Link debe viajar en el tiempo y revivir los mismos tres días una y otra vez para impedir el cataclismo.\n\nCaracterísticas\n\n-  Un nuevo aspecto: Observa el mundo que te rodea con el sistema de control por movimientos de Nintendo 3DS. También puedes usar el botón deslizante Pro de Nintendo 3DS (a la venta por separado) en Nintendo 3DS o la nueva palanca C de New Nintendo 3DS para ajustar el ángulo de visión.\n- Con un solo toque: Accede a los objetos con mayor facilidad que nunca gracias a la pantalla táctil. Basta con tocar la pantalla de menú para seleccionar tu equipamiento, además de poder consultar mapas o asignar objetos de inventario en cuestión de segundos.\n- Contrarreloj: Anota todas tus misiones en el modernizado cuaderno de los Bomber. Puedes incluso programar alarmas para no pasar por alto ningún acontecimiento especial y ver dónde está la acción en el mapa pulsando rápidamente la pantalla táctil. El tiempo pasa inexorablemente, pero este tomo tan útil te ayudará a no dormirte en los laureles.\n- Partida a buen recaudo: Gracias a las estatuas de búho y los monumentos con forma de tintero repartidos por todo Términa, ahora podrás guardar tu avance en cualquier momento. Pero ten en cuenta lo siguiente: la partida ya no se guardará automáticamente regresando al alba del primer día.\n', 'ZeldaMM.png'),
 (3, 'The Legend of Zelda: The wind waker', 'Nintendo', '2002-12-13', '\n\nEsta aventura épica de Legend of Zelda comienza con nuestro héroe sumido en una crisis familiar. La tranquila vida de Link en una pequeña isla se ve alterada un día aciago cuando su querida hermana es raptada por una enorme ave. Naturalmente, nuestro héroe inicia su rescate espada y escudo en mano. La búsqueda da lugar a una aventura épica por tierra y mar; en la que Link trata de encontrar pistas sobre el paradero de su hermana.\n\nPor su animación excepcional, The Legend of Zelda: The Wind Waker sobrepasa la originalidad de Ocarina of Time y Majora\'s Mask para Nintendo 64 y nos ofrece una experiencia única propia de la saga. Verás que la expresión de los personajes cambia al reírse, llorar, enfadarse o sorprenderse y que estos llevan a cabo distintas acciones que los llenan de vida. Además, el mundo de Link nunca ha sido tan atmosférico. Los alucinantes efectos como el fuego, sombras y humo te hacen sentirte aún más parte de la acción.\n\nObviamente, la fantástica jugabilidad que caracteriza la saga está presente en The Wind Waker. Link puede atacar con la espada (con un nuevo potente movimiento), desviar golpes con el escudo, meterse por huecos, y -por primera vez- recoger armas que sueltan los enemigos. Por otro lado, The Legend of Zelda: The Wind Waker cuenta con ese increíble sistema intuitivo de manejo que los fans de Zelda esperan siempre de esta apreciada saga.\n', 'ZeldaTWW.jpg'),
@@ -238,16 +242,22 @@ ALTER TABLE `videojuego`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `item`
+--
+ALTER TABLE `item`
+  MODIFY `idItem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
 -- AUTO_INCREMENT de la tabla `plataforma`
 --
 ALTER TABLE `plataforma`
-  MODIFY `idPlataforma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `idPlataforma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `idProductos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `idProductos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
