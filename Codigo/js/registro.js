@@ -301,7 +301,8 @@ function validarFormulario(){
                 break;
                }
     
-function darProvincia(array_list){
+function list(array_list)
+    {
     
     $("#provincia").html(""); //reset child options
     $("#provincia").append("<span class=input-group-text>Seleccione una provincia: </span><option value=0>Seleccione una provincia</option>");
@@ -413,7 +414,8 @@ function darProvincia(array_list){
        }
 
   
-function darComunidad(array_list){
+function desplega(array_list)
+    {
    
     $("#CP").html(""); //reset child options
     $("#CP").append("<option value=0>Seleccione una opcion</option>");
@@ -504,8 +506,8 @@ function darComunidad(array_list){
 
   let inputCP = document.getElementById('CP');
   inputCP.onkeyup = function(){
-    document.getElementById('provincia').value = darProvincia(inputCP.value);
-	document.getElementById('CA').value = darComunidad(inputCP.value);
+    document.getElementById('provincia').value = list(inputCP.value);
+	document.getElementById('CA').value = despliega(inputCP.value);
   }
 
 //asigna los eventListener a los diferentes campos
